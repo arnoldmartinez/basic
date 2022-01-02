@@ -1,1 +1,5 @@
-# laravel_8_build_advance_ecommerce_project_a_z
+# LARAVEL 8 BUILD ADVANCE ECOMMERCE PROJECT A-Z
+
+This project belong to the laravel 8 advance ecommerce project a-z on udemy
+
+URL: https://www.udemy.com/course/laravel-advance-ecommerce-project/
