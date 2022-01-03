@@ -11,4 +11,4 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'index'])->name('con');
