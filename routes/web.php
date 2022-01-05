@@ -12,3 +12,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/contact', [ContactController::class, 'index'])->name('con');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
