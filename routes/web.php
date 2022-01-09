@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -13,6 +14,10 @@ Route::get('/about', function () {
 });
 
 Route::get('/contact', [ContactController::class, 'index'])->name('con');
+
+// Category Controller
+Route::get('/category/all', [CategoryController::class, 'AllCat'])->name('all.category');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     // $users = User::all();
