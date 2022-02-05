@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
+use Mockery\Generator\CachingGenerator;
 
 class CategoryController extends Controller
 {
@@ -85,5 +86,19 @@ class CategoryController extends Controller
         $delete = Category::find($id)->delete();
 
         return Redirect()->back()->with('success', 'Category Soft Delete Successfully');
+    }
+
+    public function Restore($id)
+    {
+        $delete = Category::withTrashed()->find($id)->restore();
+
+        return Redirect()->back()->with('success', 'Category Restore Successfully');
+    }
+
+    public function Pdelete($id)
+    {
+        $delete = Category::onlyTrashed()->find($id)->forceDelete();
+
+        return Redirect()->back()->with('success', 'Category Permanently Deleted');
     }
 }
