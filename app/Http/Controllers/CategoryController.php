@@ -12,6 +12,11 @@ use Mockery\Generator\CachingGenerator;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function AllCat()
     {
         /*$categories = DB::table('categories')
