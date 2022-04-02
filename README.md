@@ -10,3 +10,4 @@ Install on your computer the following tools to test basic app on you local host
 
 - Composer
 - Docker
+- PHP 8 
